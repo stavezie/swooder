@@ -18,6 +18,8 @@
     &__wrapper {
         width: 100%;
         max-width: 1560px;
+
+        padding: 0 20px;
     }
 
     &__inner {
@@ -60,6 +62,8 @@
         border: 2px solid #fff;
 
         background: transparent;
+
+        outline: none;
     }
 
     &__btn-icon {
@@ -178,12 +182,23 @@
 
 @media screen and (max-width: 565px) {
     .video {
+        text-align: center;
+        &__inner {
+            align-items: center;
+            padding-left: 0;
+        }
         &__title {
-            font-size: 22px;
+            font-size: 28px;
+        }
+        &__title:before {
+            width: 0;
         }
 
         &__text {
-            font-size: 10px;
+            font-size: 12px;
+        }
+        &__text:before {
+            width: 0;
         }
 
         &-btn {

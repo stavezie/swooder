@@ -6,8 +6,9 @@
     background-size: cover;
     background-position: center;
     &__inner {
+        padding: 0 15px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
     &__copyrite {
@@ -22,8 +23,13 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 645px) {
     .footer {
-
+        &__inner {
+            justify-content: space-around;
+        }
+        img {
+            display: none;
+        }
     }
 }
