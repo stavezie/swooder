@@ -1,0 +1,142 @@
+.videos {
+    padding: 120px 0 0 0;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        margin: 0 0 25px 0;
+        padding: 30px 0;
+
+        font-size: 48px;
+        font-weight: 700;
+
+        text-transform: uppercase;
+        text-align: center;
+
+        position: relative;
+    }
+
+    &__title:after {
+        content: '';
+        width: 45px;
+        height: 4px;
+        background: $primary-color;
+
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__text {
+        margin: 0 0 95px 0;
+
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.7;
+        color: #636262;
+
+        text-align: center;
+
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        margin: 0 85px 0 0;
+
+        width: 100%;
+
+        position: relative;
+    }
+
+    &__video {
+        display: block;
+
+        width: 100%;
+        height: auto;
+    }
+
+    &__item:last-child {
+        margin: 0;
+    }
+
+    &__img-text {
+        text-align: center;
+
+        position: relative;
+    }
+    &__img-text::before {
+        content: '';
+        width: 25px;
+        height: 1px;
+        background: $primary-color;
+
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__video {
+        display: block;
+        margin: 0 0 40px 0;
+
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+
+        object-fit: cover;
+    }
+    &__btn {
+        background: transparent;
+        outline: 0;
+
+        opacity: 1;
+
+        position: absolute;
+        top: 45%;
+        left: 50%;
+
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+}
+
+@media screen and (max-width: 940px) {
+    .videos {
+        &__video {
+            height: 200px;
+            width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .videos {
+        &__title {
+            font-size: 28px;
+        }
+        &__text {
+            font-size: 12px;
+        }
+        &__texts {
+            text-align: center;
+        }
+        &__items {
+            flex-direction: column;
+        }
+        &__item {
+            margin: 0;
+        }
+        &__img-text {
+            margin: 0 0 30px 0;
+        }
+    }
+}
+

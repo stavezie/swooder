@@ -1,0 +1,29 @@
+.footer {
+    padding: 25px 0;
+
+    background: url(../img/footer/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__copyrite {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #464646;
+    }
+    &__text {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #464646;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        display: none;
+    }
+}

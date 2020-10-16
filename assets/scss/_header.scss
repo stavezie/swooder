@@ -1,0 +1,233 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 30px;
+    height: 100px;
+    width: 100%;
+
+    position: absolute;
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    &__menu-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__menu-wrapper:hover &__menu-text {
+        opacity: .75;
+    }
+
+    &__burger-menu__inner {
+        padding: 10px 5px;
+        cursor: pointer;
+    }
+
+    &__burger-menu {
+        width: 30px;
+        height: 2px;
+        border-radius: 5px;
+        background: $primary-color;
+
+        position: relative;
+    }
+
+    &__burger-menu:before,
+    &__burger-menu:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: $primary-color;
+
+        position: absolute;
+        left: 0;
+
+        transition: all .4s linear;
+    }
+
+    &__burger-menu:before {
+        top: -8px;
+        transform: rotate(0deg);
+    }
+
+    &__burger-menu:after {
+        top: 8px;
+        transform: rotate(0deg);
+    }
+
+    &__menu-active &__burger-menu:before {
+        top: 0;
+        transition: top .4s linear;
+        transform: rotate(360deg);
+    }
+
+    &__menu-active &__burger-menu:after {
+        top: 0;
+        transform: rotate(-360deg);
+        transition: top .4s linear;
+    }
+
+    &__menu-text {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 5px;
+
+        font-family: 'ProximaNova Bold', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        opacity: .5;
+        line-height: 1.8;
+        text-transform: uppercase;
+
+        transition: opacity .2s linear;
+
+        cursor: pointer;
+    }
+
+    &__center {
+        display: flex;
+    }
+
+    &__logo {
+        position: relative;
+    }
+
+    &__nav {
+        align-items: center;
+
+        display: flex;
+
+        height: 0;
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    &__nav ul {
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav__link {
+        font-size: 14px;
+        color: #fff;
+        opacity: .5;
+
+        text-transform: uppercase;
+
+        transition: opacity .2s linear;
+    }
+    &__li {
+        margin: 0 0 0 100px;
+    }
+
+    &__nav__link:hover {
+        opacity: .75;
+    }
+
+    &__lang {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+    }
+
+    &__icon {
+        width: 15px;
+        height: 15px;
+        fill: #fff;
+        opacity: .5;
+
+
+        cursor: pointer;
+
+    }
+
+    &__icon:hover {
+        opacity: .75;
+    }
+
+    &__hover-text {
+        color: #fff;
+
+        padding: 20px 20px;
+        border: 1px solid #fff;
+        border-radius: 25px;
+
+        position: absolute;
+        top: 30px;
+        left: -65%;
+
+        background: transparent;
+
+        opacity: 0;
+    }
+    &__drop-list {
+        margin: 0 0 0 50px;
+
+        font-size: 12px;
+
+        color: #fff;
+        opacity: .5;
+
+        cursor: pointer;
+
+        transition: opacity .2s linear;
+    }
+
+    &__drop-list:hover {
+        opacity: .75;
+    }
+}
+
+@media screen and (max-width: 948px) {
+    .header {
+        &__center {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__logo-img {
+            padding: 20px 0;
+            width: 212px;
+        }
+        &__nav {
+            position: absolute;
+            top: 75px;
+        }
+        &__li {
+            margin: 20px 0 0 100px;
+        }
+        &__li:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        flex-direction: column;
+        &__nav {
+            top: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header {
+        &__li {
+            margin-left: 50px;
+        }
+    }
+}
+
