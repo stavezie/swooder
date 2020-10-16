@@ -33,14 +33,10 @@ function videoPlayer(btn) {
     if (video.paused) {
         video.play();
         btn.style.opacity = 0;
-        btn.style.height = "265px";
-        btn.style.width = "265px";
     }
     else {
         video.pause();
         btn.style.opacity = 1;
-        btn.style.height = "auto";
-        btn.style.width = "auto";
     }
 
   }
