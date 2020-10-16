@@ -1,8 +1,9 @@
 const menu = document.querySelector('.header__menu');
-
 const nav = document.querySelector('.header__nav');
-
 const logo = document.querySelector('header__logo');
+
+var info = document.querySelector('.header__icon');
+var hover_text = document.querySelector('.header__hover-text');
 
 menu.addEventListener('click', function(){
 
@@ -21,6 +22,8 @@ menu.addEventListener('click', function(){
     }
 });
 
+
+// VideoPlayer
 
 
 function videoPlayer(btn) {
@@ -42,9 +45,8 @@ function videoPlayer(btn) {
 
   }
 
-var info = document.querySelector('.header__icon');
+// Help Text
 
-var hover_text = document.querySelector('.header__hover-text');
 
 info.addEventListener('mouseenter', function s(element) {
     hover_text.style.opacity = 1;
@@ -55,6 +57,15 @@ info.addEventListener('mouseenter', function s(element) {
 info.addEventListener('mouseleave', function() {
     hover_text.style.opacity = 0;
     hover_text.style.transition = "opacity 0.4s linear";
+});
+
+// FancyBox
+
+$('[data-fancybox]').fancybox({
+    youtube : {
+        controls : 1,
+        showinfo : 1
+    }
 });
 
 

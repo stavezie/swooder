@@ -5,17 +5,20 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
     &__inner {
         padding: 0 15px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
     &__copyrite {
         font-size: 15px;
         line-height: 1.7;
         color: #464646;
     }
+
     &__text {
         font-size: 15px;
         line-height: 1.7;
@@ -28,8 +31,20 @@
         &__inner {
             justify-content: space-around;
         }
+
         img {
             display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .footer {
+        &__copyrite {
+            font-size: 12px;
+        }
+        &__text {
+            font-size: 12px;
         }
     }
 }
