@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
+    <link rel="stylesheet" href="fancybox-master/dist/jquery.fancybox.css">
     <link rel="stylesheet" href="assets/css/null.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -70,7 +71,7 @@
         </div>
     </header>
 
-    <section class="home">
+    <section class="home" id="home">
         <div class="home__texts">
             <h1 class="home__title">Wooder</h1>
             <button class="home-btn">Learn More
@@ -78,7 +79,7 @@
         </div>
     </section>
 
-    <section class="furniture">
+    <section class="furniture" id="products">
         <div class="container">
             <div class="furniture__inner">
                 <div class="furniture__elements">
@@ -205,18 +206,18 @@
                     Adhering to the global quality standards. And we are <br>
                     doing work with love.
                 </p>
-                <button class="video-btn">
+                <a class="video-btn" data-fancybox href="assets/videos/mainvideo.mp4">
                     <svg class="video__btn-icon">
                         <use xlink:href="#play-btn"></use>
                     </svg>
 
                     <span class="video__btn-span"> Watch Video</span>
-                </button>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="about">
         <div class="container">
             <div class="about-us__inner">
                 <div class="about-us__photo">
@@ -249,6 +250,8 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="fancybox-master/dist/jquery.fancybox.min.js"></script>
     <script src="assets/js/transition.min.js"></script>
     <script src="assets/js/script.js"></script>
 
