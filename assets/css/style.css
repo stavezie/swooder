@@ -983,9 +983,3 @@ body {
   line-height: 1.7;
   color: #464646;
 }
-
-@media screen and (max-width: 600px) {
-  .footer {
-    display: none;
-  }
-}
